@@ -1,18 +1,27 @@
 body{
-text-align:center;
-font-family:Arial;
-background:#eaf7ea;
+    font-family: Arial;
+    background: linear-gradient(to right, #d4fc79, #96e6a1);
+    text-align: center;
 }
 
-input{
-display:block;
-margin:10px auto;
-padding:10px;
+.container{
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px gray;
+}
+
+input, button{
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
 }
 
 button{
-padding:10px;
-background:green;
-color:white;
-border:none;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }

@@ -18,3 +18,27 @@ document.getElementById("result").innerHTML=
 });
 
 }
+function loadChart(){
+
+fetch("/history")
+.then(res=>res.json())
+.then(data=>{
+
+let values=data.map(item=>item[0]);
+
+new Chart(document.getElementById("chart"), {
+type: 'line',
+data: {
+labels: values.map((_,i)=>"Day "+(i+1)),
+datasets: [{
+label: "Carbon Footprint",
+data: values
+}]
+}
+});
+
+});
+
+}
+
+window.onload=loadChart;
